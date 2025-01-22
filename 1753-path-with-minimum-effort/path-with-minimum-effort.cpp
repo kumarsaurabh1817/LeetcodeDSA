@@ -35,9 +35,9 @@ public:
 
                 if(isValid(newX,newY,M,N)){
                     int NewEffort = abs(Heights[newX][newY]-Heights[currX][currY]);
-                    int Max_NewCurr=max(CurrentEffort,NewEffort);
-                    if(Max_NewCurr < Effort[newX][newY]){
-                        Effort[newX][newY]=Max_NewCurr;
+                    int Max_NewCurrEffort=max(CurrentEffort,NewEffort);
+                    if(Max_NewCurrEffort < Effort[newX][newY]){
+                        Effort[newX][newY]=Max_NewCurrEffort;
                         pq.push({Effort[newX][newY],{newX,newY}});
                     }
                 }
