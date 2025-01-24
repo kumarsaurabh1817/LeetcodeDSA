@@ -28,13 +28,13 @@ public:
                     Count++;
                 }
             }
-            if(Count < CountMin){
+            if(Count <= CountMin){
                 CountMin=Count;
                 CityIndex=i;
             }
-            else if(Count == CountMin){
-                CityIndex=i;
-            }
+            // else if(Count == CountMin){
+            //     CityIndex=i;
+            // }
         }
         return CityIndex;
     }
