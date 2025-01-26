@@ -76,8 +76,9 @@ public:
         long long CurrentLeftSum=0;
         for(int i=0;i<temp.size()-1;i++){
             CurrentLeftSum+=temp[i];
-            long long CurrentRightSum=TotalSum-CurrentLeftSum;
-            answer += (temp[i] * CurrentRightSum);
+            // long long CurrentRightSum=TotalSum-CurrentLeftSum;
+            answer += ((long long)temp[i] * ((long long)n-(long long)temp[i]));
+            n-=temp[i];
         }
         return answer;
     }
